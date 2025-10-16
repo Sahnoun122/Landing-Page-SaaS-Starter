@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowLeft, Zap, Layers, Code, Users, Target, Heart, Github, Twitter, Linkedin } from "lucide-react"
+import { ArrowLeft, Zap, Layers, Users, Target, Heart, Github, Twitter, Linkedin } from "lucide-react"
 import { motion } from "framer-motion"
 import { ThemeToggle } from "@/components/ui/theme-toggle"
 
@@ -107,7 +107,7 @@ export default function AboutPage() {
           </h1>
           
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            We're on a mission to democratize SaaS development by providing developers with the most 
+            We&apos;re on a mission to democratize SaaS development by providing developers with the most 
             advanced tools and templates to build, launch, and scale their ideas faster than ever before.
           </p>
         </motion.div>

@@ -73,7 +73,7 @@ export function PricingSection() {
     )
   }
   return (
-    <section id="pricing" className="section-professional py-24 relative overflow-hidden">
+    <section id="pricing" className="section-professional pricing-section py-16 sm:py-20 md:py-24 relative overflow-hidden">
       {/* Effets d'arrière-plan cohérents */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-full blur-3xl animate-float" />
@@ -82,7 +82,7 @@ export function PricingSection() {
       
       <Container>
         <motion.div 
-          className="text-center mb-20 relative z-10"
+          className="text-center mb-12 sm:mb-16 md:mb-20 relative z-10 px-4 sm:px-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -105,25 +105,25 @@ export function PricingSection() {
         </motion.div>
         
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-7xl mx-auto pt-12 relative z-10"
+          className="pricing-grid grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 md:gap-12 max-w-7xl mx-auto pt-8 md:pt-12 px-4 sm:px-6 relative z-10"
           variants={container}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
         >
           {plans.map((plan) => (
-            <motion.div key={plan.name} variants={item}>
-              <Card className={`relative h-full group card-modern overflow-visible ${plan.popular ? 'border-primary/30 shadow-2xl scale-105' : 'mt-10'}`}>
+            <motion.div key={plan.name} variants={item} className="flex flex-col">
+              <Card className={`pricing-card ${plan.popular ? 'popular' : ''} relative h-full group card-modern overflow-visible ${plan.popular ? 'border-primary/30 shadow-2xl' : ''}`}>
                 {plan.popular && (
-                  <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 z-20">
-                    <div className="btn-primary px-8 py-3 rounded-full text-sm font-bold flex items-center gap-2 shadow-2xl">
-                      <Star className="w-4 h-4 fill-current" />
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-20">
+                    <div className="btn-primary px-6 py-2 rounded-full text-xs font-bold flex items-center gap-2 shadow-xl">
+                      <Star className="w-3 h-3 fill-current" />
                       Most Popular
                     </div>
                   </div>
                 )}
                 
-                <CardHeader className={`text-center pb-6 relative z-10 ${plan.popular ? 'pt-20' : 'pt-8'}`}>
+                <CardHeader className={`text-center pb-6 relative z-10 ${plan.popular ? 'pt-16' : 'pt-12'}`}>
                   <CardTitle className="text-3xl font-bold text-card-foreground group-hover:text-primary transition-colors duration-300">{plan.name}</CardTitle>
                   <CardDescription className="text-muted-foreground text-lg mt-2 transition-colors duration-300">
                     {plan.description}

@@ -13,8 +13,7 @@ import {
   Headphones, 
   Crown,
   Rocket,
-  Users,
-  Zap
+  Users
 } from "lucide-react"
 
 export default function PricingPage() {

@@ -18,6 +18,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -26,25 +27,15 @@ import {
   FolderKanban, 
   BarChart3, 
   Users, 
-  FileText, 
+  BookOpen,
   Bell,
   Menu,
   X,
-  Plus,
   CheckCircle,
   AlertCircle,
-  Clock,
-  User,
-  Trash2,
-  BookOpen
+  Clock
 } from 'lucide-react'
 import { ThemeToggle } from '@/components/ui/theme-toggle'
-
-
-// Props interface for the DashboardNav component
-interface DashboardNavProps {
-  // Currently no props needed, but interface is ready for future extensions
-}
 
 // Interface defining the structure of notification objects
 interface Notification {
@@ -342,9 +333,11 @@ export default function DashboardNav() {
             <div className="relative">
               <Link href="/profile" className="flex items-center space-x-3 p-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-200 group">
                 <div className="w-8 h-8 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center shadow-lg">
-                  <img 
+                  <Image 
                     src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                     alt="Profile"
+                    width={32}
+                    height={32}
                     className="w-8 h-8 rounded-full object-cover"
                   />
                 </div>
@@ -469,9 +462,11 @@ export default function DashboardNav() {
                   >
                     <div className="p-2 bg-white/20 backdrop-blur-xl group-hover:bg-white/30 rounded-lg transition-all duration-200">
                       <div className="w-5 h-5 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center overflow-hidden">
-                        <img 
+                        <Image 
                           src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                           alt="Profile"
+                          width={20}
+                          height={20}
                           className="w-5 h-5 rounded-full object-cover"
                         />
                       </div>

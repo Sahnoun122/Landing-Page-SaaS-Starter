@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ThemeToggle } from "@/components/ui/theme-toggle"
-import { Zap, Layers, Code, Mail, ArrowLeft, ArrowRight, CheckCircle, Clock, Shield, MessageSquare } from "lucide-react"
+import { Zap, Layers, Code, Mail, ArrowLeft, ArrowRight, CheckCircle } from "lucide-react"
 import { motion } from "framer-motion"
 
 export default function ForgotPasswordPage() {

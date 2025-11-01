@@ -1,10 +1,11 @@
 ﻿'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Container } from "@/components/ui/container"
 import { ThemeToggle } from "@/components/ui/theme-toggle"
-import { Users, UserPlus, Edit, Trash2, X, Crown, Search, Filter, Mail, MapPin, Eye, Calendar, Clock, Award, Shield, Activity, Sparkles, Star } from 'lucide-react';
+import { Users, UserPlus, Edit, Trash2, X, Crown, Search, Filter, Mail, MapPin, Eye, Sparkles, Star } from 'lucide-react';
 import { PricingPlansManager, type PricingPlan, formatCurrency } from '@/lib/billing-manager';
 import { useToast } from '@/components/ui/toast';
 
@@ -558,9 +559,11 @@ export default function TeamPage() {
                 
                 <div className="flex items-center gap-4">
                   <div className="relative">
-                    <img
+                    <Image
                       src={selectedMember.avatar}
                       alt={selectedMember.name}
+                      width={64}
+                      height={64}
                       className="w-16 h-16 rounded-2xl object-cover border-2 border-white/30 shadow-xl"
                     />
                     {getMemberPlan(selectedMember.planId)?.popular && (

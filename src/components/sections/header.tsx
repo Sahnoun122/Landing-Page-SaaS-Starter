@@ -3,7 +3,6 @@
 import Link from "next/link"
 import { Menu, X, Zap, Layers, Code } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Container } from "@/components/ui/container"
 import { ThemeToggle } from "@/components/ui/theme-toggle"
 
 import { motion, AnimatePresence } from "framer-motion"

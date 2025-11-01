@@ -1,12 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Container } from "@/components/ui/container";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { 
-  TrendingUp, 
-  TrendingDown, 
   Users, 
   DollarSign, 
   Eye, 
@@ -15,24 +13,22 @@ import {
   Download,
   Filter,
   RefreshCw,
-  BarChart3,
   PieChart,
   Activity,
   Globe,
   Smartphone,
   Monitor,
-  Sparkles,
-  Star,
   ArrowUpRight,
   ArrowDownRight
 } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 
 interface MetricData {
   label: string;
   value: string;
   change: string;
   trend: 'up' | 'down';
-  icon: any;
+  icon: LucideIcon;
   color: string;
 }
 
@@ -276,7 +272,7 @@ export default function AnalyticsPage() {
             {/* Chart Area */}
             <div className="relative h-64 glass-card p-6 rounded-xl">
               <div className="flex items-end justify-between h-full">
-                {chartData.map((point, index) => (
+                {chartData.map((point) => (
                   <div key={point.date} className="flex flex-col items-center gap-2 flex-1">
                     <div className="flex items-end gap-1 h-32">
                       <div

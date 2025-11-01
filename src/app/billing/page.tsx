@@ -10,7 +10,6 @@ import {
   Download,
   Receipt,
   Calendar,
-  DollarSign,
   FileText,
   Clock,
   CheckCircle,
@@ -18,7 +17,6 @@ import {
   Zap,
   Layers,
   Code,
-  Filter,
   Search,
   ExternalLink
 } from "lucide-react"
@@ -318,7 +316,7 @@ export default function BillingPage() {
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
-                {filteredInvoices.map((invoice, index) => {
+                {filteredInvoices.map((invoice) => {
                   const StatusIcon = getStatusIcon(invoice.status)
                   return (
                     <div key={invoice.id} className="flex items-center justify-between glass-card p-4 rounded-xl border-0 hover:shadow-md transition-shadow duration-200">

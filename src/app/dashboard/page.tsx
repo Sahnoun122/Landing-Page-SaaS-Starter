@@ -2,28 +2,19 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { ThemeToggle } from "@/components/ui/theme-toggle"
 import { 
-  BarChart3, 
   Users, 
   FolderOpen, 
-  TrendingUp, 
   Activity, 
-  Calendar,
   Clock,
   ArrowUpRight,
   ArrowDownRight,
   DollarSign,
   Target,
   Bell,
-  ChevronRight,
-  ArrowLeft,
-  Settings,
-  Search,
-  Plus
+  ChevronRight
 } from 'lucide-react'
 
 export default function DashboardPage() {

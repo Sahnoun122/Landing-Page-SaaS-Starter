@@ -1,13 +1,13 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { motion } from "framer-motion"
 import { Container } from "@/components/ui/container"
 import { ThemeToggle } from "@/components/ui/theme-toggle"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { 
   User, 
   Mail, 
@@ -158,9 +158,11 @@ export default function ProfilePage() {
               <div className="relative -mt-16 mb-6 lg:mb-0">
                 <div className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-xl opacity-50 group-hover:opacity-70 transition-opacity duration-300" />
-                  <img
+                  <Image
                     src={profileData.profileImage}
                     alt="Profile"
+                    width={128}
+                    height={128}
                     className="relative w-32 h-32 rounded-full border-4 border-white dark:border-gray-800 shadow-2xl object-cover hover:scale-105 transition-transform duration-300"
                   />
                   {isEditing && (
